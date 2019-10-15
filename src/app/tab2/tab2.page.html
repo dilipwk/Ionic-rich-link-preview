@@ -6,4 +6,29 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <section class="home">
+    <div class="container" fxFlex.xs="100" fxFlex.sm="70" fxFlex="50">
+      <div fxLayout="column" fxLayoutAlign="center">
+  
+        <mat-form-field class="demo-full-width" appearance="outline">
+          <textarea matInput [(ngModel)]="textValue" matLinkPreview minRows="6"></textarea>
+          <mat-link-preview-container showLoadingsProgres="true" [multiple]="true" color="primary"></mat-link-preview-container>
+        </mat-form-field>
+  
+        <!-- <mat-card>
+          <mat-card-title>Code</mat-card-title>
+          <mat-card-content>
+            <markdown src="assets/md/e1.md"></markdown>
+          </mat-card-content>
+        </mat-card> -->
+  
+        <!-- <mat-link-preview [linkPreview]="linkExample"></mat-link-preview> -->
+
+        <mat-link-preview link="{{textValue}}"></mat-link-preview>
+  
+        <p>Happy ng-hacking!</p>
+      </div>
+    </div>
+  </section>
+</ion-content>
